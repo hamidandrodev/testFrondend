@@ -80,23 +80,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int status = statusPertama+statusKedua+statusKetiga;
+                nilaiSatu = Double.parseDouble(txtPertama.getText().toString());
+                nilaiDua = Double.parseDouble(txtKedua.getText().toString());
+                nilaiTiga = Double.parseDouble(txtKetiga.getText().toString());
                 if(status==0){
                     Toast.makeText(getApplicationContext(),"Centang tidak boleh kosong",Toast.LENGTH_LONG).show();
                 }else if(status==1){
                     Toast.makeText(getApplicationContext(),"Centang minimal dua",Toast.LENGTH_LONG).show();
                 }else{
-                    int count = 0;
-
-                    if (checkPertama.isChecked()) {
-                        count+=10;
+                    if(statusPertama==1 && statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu+nilaiDua+nilaiTiga));
+                    }else if(statusPertama==1 && statusKedua==1){
+                        hasil.setText(String.valueOf(nilaiSatu+nilaiDua));
+                    }else if(statusPertama==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu+nilaiTiga));
+                    }else if( statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiDua+nilaiTiga));
                     }
-                    if (checkKedua.isChecked()) {
-                        count+=2;
-                    }
-                    if (checkKetiga.isChecked()) {
-                        count+=5;
-                    }
-                    hasil.setText(String.valueOf(count));
                 }
             }
         });
@@ -104,23 +104,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int status = statusPertama+statusKedua+statusKetiga;
+                nilaiSatu = Double.parseDouble(txtPertama.getText().toString());
+                nilaiDua = Double.parseDouble(txtKedua.getText().toString());
+                nilaiTiga = Double.parseDouble(txtKetiga.getText().toString());
                 if(status==0){
                     Toast.makeText(getApplicationContext(),"Centang tidak boleh kosong",Toast.LENGTH_LONG).show();
                 }else if(status==1){
                     Toast.makeText(getApplicationContext(),"Centang minimal dua",Toast.LENGTH_LONG).show();
                 }else{
-                    int count = 0;
-
-                    if (checkPertama.isChecked()) {
-                        count-=10;
+                    if(statusPertama==1 && statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu-nilaiDua-nilaiTiga));
+                    }else if(statusPertama==1 && statusKedua==1){
+                        hasil.setText(String.valueOf(nilaiSatu-nilaiDua));
+                    }else if(statusPertama==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu-nilaiTiga));
+                    }else if( statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiDua-nilaiTiga));
                     }
-                    if (checkKedua.isChecked()) {
-                        count-=2;
-                    }
-                    if (checkKetiga.isChecked()) {
-                        count-=5;
-                    }
-                    hasil.setText(String.valueOf(count));
                 }
 
             }
@@ -129,23 +129,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int status = statusPertama+statusKedua+statusKetiga;
+                nilaiSatu = Double.parseDouble(txtPertama.getText().toString());
+                nilaiDua = Double.parseDouble(txtKedua.getText().toString());
+                nilaiTiga = Double.parseDouble(txtKetiga.getText().toString());
                 if(status==0){
                     Toast.makeText(getApplicationContext(),"Centang tidak boleh kosong",Toast.LENGTH_LONG).show();
                 }else if(status==1){
                     Toast.makeText(getApplicationContext(),"Centang minimal dua",Toast.LENGTH_LONG).show();
                 }else{
-                    Double count = 0.0;
-
-                    if (checkPertama.isChecked()) {
-                        count*=10;
+                    if(statusPertama==1 && statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu*nilaiDua*nilaiTiga));
+                    }else if(statusPertama==1 && statusKedua==1){
+                        hasil.setText(String.valueOf(nilaiSatu*nilaiDua));
+                    }else if(statusPertama==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu*nilaiTiga));
+                    }else if( statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiDua*nilaiTiga));
                     }
-                    if (checkKedua.isChecked()) {
-                        count*=2;
-                    }
-                    if (checkKetiga.isChecked()) {
-                        count*=5;
-                    }
-                    hasil.setText(String.valueOf(count));
                 }
 
             }
@@ -154,23 +154,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int status = statusPertama+statusKedua+statusKetiga;
+                nilaiSatu = Double.parseDouble(txtPertama.getText().toString());
+                nilaiDua = Double.parseDouble(txtKedua.getText().toString());
+                nilaiTiga = Double.parseDouble(txtKetiga.getText().toString());
                 if(status==0){
                     Toast.makeText(getApplicationContext(),"Centang tidak boleh kosong",Toast.LENGTH_LONG).show();
                 }else if(status==1){
                     Toast.makeText(getApplicationContext(),"Centang minimal dua",Toast.LENGTH_LONG).show();
                 }else{
-                    Double count = 0.0;
-
-                    if (checkPertama.isChecked()) {
-                        count/=10;
+                    if(statusPertama==1 && statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu/nilaiDua/nilaiTiga));
+                    }else if(statusPertama==1 && statusKedua==1){
+                        hasil.setText(String.valueOf(nilaiSatu/nilaiDua));
+                    }else if(statusPertama==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiSatu/nilaiTiga));
+                    }else if( statusKedua==1 && statusKetiga==1){
+                        hasil.setText(String.valueOf(nilaiDua/nilaiTiga));
                     }
-                    if (checkKedua.isChecked()) {
-                        count/=2;
-                    }
-                    if (checkKetiga.isChecked()) {
-                        count/=5;
-                    }
-                    hasil.setText(String.valueOf(count));
                 }
 
             }

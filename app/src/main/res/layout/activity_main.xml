@@ -21,19 +21,19 @@
             <EditText
                 android:id="@+id/input_pertama"
                 android:text="10"
-                android:enabled="false"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/input_kedua"
                 android:text="2"
-                android:enabled="false"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/input_ketiga"
                 android:text="5"
-                android:enabled="false"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
